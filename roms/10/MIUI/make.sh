@@ -27,7 +27,7 @@ rm -rf $1/app/NQNfcNci
 
 cat $thispath/rw-system.add.sh >> $1/bin/rw-system.sh
 
-sed -i 's/<bool name="support_round_corner">true/<bool name="support_round_corner">false/' $1/etc/device_features/*
+#sed -i 's/<bool name="support_round_corner">true/<bool name="support_round_corner">false/' $1/etc/device_features/*
 
 sed -i "/miui.notch/d" $1/build.prop
 
