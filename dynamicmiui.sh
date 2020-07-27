@@ -40,31 +40,29 @@ $simg2img product.img product.img.raw
 rm -f product.img
 mv product.img.raw product.img
 
-# Mount the two files
-echo "Merging two images.."
-mkdir mountsys &&mkdir mountpro
-sudo mount system.img mountsys
-sudo mount product.img mountpro
-sudo mkdir mountsys/system/product
-sudo cp -v -r -p mountpro/* mountsys/system/product
-sudo umount product.img
-cd ..
-
 # Make new dummy image
 echo "Creating dummy image"
-dd if=/dev/zero of=$outdir/system.img bs=4k count=1048576
-mkfs.ext4 $outdir/system.img
-tune2fs -c0 -i0 $outdir/system.img
-mkdir bruh
-sudo mount $outdir/system.img bruh
-sudo cp -v -r -p $tmpdir/mountsys/* bruh
-sudo umount $tmpdir/system.img
-sudo umount $outdir/system.img
+dd if=/dev/zero of=final.img bs=4k count=1048576
+mkfs.ext4 final.img
+tune2fs -c0 -i0 final.img
+
+# Mount the two files
+echo "Merging two images.."
+mkdir mountsys &&mkdir mountpro &&mkdir mountfin
+sudo mount final.img mountfin
+sudo mount system.img mountsys
+sudo mount product.img mountpro
+sudo cp -v -r -p mountpro/* mountfin/system/product
+sudo umount product.img
+sudo umount final.img
+sudo umount system.img
+cd ../../
 
 # Clean up
 echo "Cleaning up.."
 sudo rm -rf $tmpdir
-sudo rm -rf bruh
+cp $tmpdir/final.img $outdir
+mv $outdir/final.img system.img
 
 # Finalize
 echo "Please finish creating GSI using make.sh script"
