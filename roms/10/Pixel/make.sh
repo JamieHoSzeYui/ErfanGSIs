@@ -8,7 +8,7 @@ cp -fpr $thispath/overlay/* $1/product/overlay/
 
 # Append file_context
 sed -i "s/persist.sys.usb.config=none/persist.sys.usb.config=adb/g" $1/etc/prop.default
-echo "ro.setupwizard.mode=DISABLED" >> $1/etc/prop.default
+#echo "ro.setupwizard.mode=DISABLED" >> $1/etc/prop.default
 echo "ro.boot.vendor.overlay.theme=com.google.android.theme.pixel" >> $1/etc/prop.default
 echo "ro.config.ringtone=The_big_adventure.ogg" >> $1/etc/prop.default
 echo "ro.config.notification_sound=Popcorn.ogg" >> $1/etc/prop.default
