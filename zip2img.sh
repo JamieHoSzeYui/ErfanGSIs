@@ -37,8 +37,8 @@ ozipdecrypt="$toolsdir/oppo_ozip_decrypt/ozipdecrypt.py"
 brotli_exec="$toolsdir/$HOST/bin/brotli"
 
 romzip="$(realpath $1)"
-PARTITIONS="system"
-EXT4PARTITIONS="system"
+PARTITIONS="system product opproduct system_ext odm"
+EXT4PARTITIONS="system product opproduct system_ext odm"
 OTHERPARTITIONS=""
 
 echo "Create Temp and out dir"
