@@ -71,3 +71,21 @@ rm -rf $1/product/priv-app/HotwordEnrollmentXGoogleRT5514P
 rm -rf $1/product/priv-app/RecorderPrebuilt
 rm -rf $1/product/priv-app/TurboPrebuilt
 rm -rf $1/product/priv-app/Velvet
+
+# CUT HERE
+# test debloat list
+rm -rf $1/system_ext/app/Flipendo
+rm -rf $1/system_ext/priv-app/HbmSVManager
+rm -rf $1/system_ext/priv-app/GoogleFeedback
+rm -rf $1/system_ext/priv-app/PixelNfc
+rm -rf $1/system_ext/priv-app/NfcNci
+rm -rf $1/product/app/arcore
+rm -rf $1/product/app/talkback
+
+# Hotword
+rm -rf $1/product/priv-app/HotwordEnrollment*
+rm -rf $1/system_ext/framework/com.android.hotwordenrollment*
+rm -rf $1/system_ext/framework/oat/arm/com.android.hotwordenrollment*
+rm -rf $1/system_ext/framework/oat/arm64/com.android.hotwordenrollment*
+
+# CUT HERE
