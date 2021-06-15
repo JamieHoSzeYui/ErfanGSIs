@@ -46,3 +46,28 @@ rm -rf $1/product/app/Videos
 
 # Fix Files-DocumentsUI
 rm -rf $1/product/overlay/PixelDocumentsUIOverlay
+
+rm -rf $1/product/app/CalculatorGooglePrebuilt
+rm -rf $1/product/app/CalendarGooglePrebuilt
+rm -rf $1/product/app/Chrome
+rm -rf $1/product/app/Chrome-Stub
+rm -rf $1/product/app/DevicePolicyPrebuilt
+rm -rf $1/product/app/DiagnosticsToolPrebuilt
+rm -rf $1/product/app/Drive
+rm -rf $1/product/app/GoogleCamera
+rm -rf $1/product/app/GoogleTTS
+rm -rf $1/product/app/Maps
+rm -rf $1/product/app/Photos
+rm -rf $1/product/app/Videos
+rm -rf $1/product/app/YouTube
+rm -rf $1/product/app/YouTubeMusicPrebuilt
+rm -rf $1/product/priv-app/AmbientSensePrebuilt
+rm -rf $1/product/priv-app/AndroidAutoStubPrebuilt
+rm -rf $1/product/priv-app/BetaFeedback
+rm -rf $1/product/priv-app/CarrierServices
+rm -rf $1/product/priv-app/HelpRtcPrebuilt
+rm -rf $1/product/priv-app/HotwordEnrollmentOKGoogleRT5514P
+rm -rf $1/product/priv-app/HotwordEnrollmentXGoogleRT5514P
+rm -rf $1/product/priv-app/RecorderPrebuilt
+rm -rf $1/product/priv-app/TurboPrebuilt
+rm -rf $1/product/priv-app/Velvet
